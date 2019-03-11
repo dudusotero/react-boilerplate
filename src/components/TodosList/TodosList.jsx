@@ -34,21 +34,27 @@ const TodosList = () => {
         </button>
       </form>
       <ul>
-        {todosStore.todos.map(todo => (
-          <li
-            key={todo.id}
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-          >
-            {todo.title}
-            <br />
-            <button type="button" onClick={() => toggleTodo(todo.id)}>
-              Toggle
-            </button>
-            <button type="button" onClick={() => removeTodo(todo.id)}>
-              Remove
-            </button>
-          </li>
-        ))}
+        {todosStore.loading ? (
+          <div>Loading...</div>
+        ) : (
+          todosStore.todos.map(todo => (
+            <li
+              key={todo.id}
+              style={{
+                textDecoration: todo.completed ? 'line-through' : 'none',
+              }}
+            >
+              {todo.title}
+              <br />
+              <button type="button" onClick={() => toggleTodo(todo.id)}>
+                Toggle
+              </button>
+              <button type="button" onClick={() => removeTodo(todo.id)}>
+                Remove
+              </button>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   )

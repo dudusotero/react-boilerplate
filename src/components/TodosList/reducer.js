@@ -1,12 +1,16 @@
-import React, { useContext, createContext, useReducer } from 'react'
+import React, {
+  useContext, createContext, useReducer, useEffect,
+} from 'react'
 
 const initialState = {
   todos: [],
-  loading: false,
+  loading: true,
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'fetch':
+      return { todos: [...action.payload], loading: false }
     case 'add':
       return {
         todos: [
@@ -38,6 +42,13 @@ export const useTodosList = () => useContext(Context)
 
 export const TodosCtxProvider = ({ children }) => {
   const [todosStore, todosDispatch] = useReducer(reducer, initialState)
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos/?_limit=5')
+      .then(response => response.json())
+      .then(data => todosDispatch({ type: 'fetch', payload: data }))
+  }, [])
+
   return (
     <Context.Provider value={{ todosDispatch, todosStore }}>
       {children}
