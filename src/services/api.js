@@ -9,7 +9,7 @@ api.interceptors.request.use(async (config) => {
   const token = getToken()
   if (token) {
     const headers = { ...config.headers }
-    headers.Authorization = `Bearer ${token}`
+    headers.Authorization = `JWT ${token}`
     return { ...config, headers }
   }
   return config
