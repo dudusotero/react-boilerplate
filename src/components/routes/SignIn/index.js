@@ -1,11 +1,11 @@
 import React from 'react'
-import { useUser } from './reducer'
+import { useAuth } from '../../../reducers'
 
 const SignIn = () => {
-  const { userStore } = useUser()
+  const { authStore } = useAuth()
 
   const authWithGoogle = () => {
-    window.location.href = 'http://192.168.86.27:5000/auth/google'
+    window.location.href = 'https://feracode-num.herokuapp.com/auth/google'
   }
 
   return (
@@ -15,10 +15,10 @@ const SignIn = () => {
         Google Login
       </button>
 
-      {userStore.loading ? (
+      {authStore.loading ? (
         <p>Loading...</p>
       ) : (
-        <p>{JSON.stringify(userStore.user)}</p>
+        <p>{JSON.stringify(authStore.user)}</p>
       )}
     </div>
   )

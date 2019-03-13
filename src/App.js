@@ -1,20 +1,26 @@
-import React from 'react'
-import { TodosCtxProvider } from './components/TodosList/reducer'
-import TodosList from './components/TodosList/TodosList'
-import { UserCtxProvider } from './components/Signin/reducer'
-import SignIn from './components/Signin/SignIn'
+import React, { useState, Fragment } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
 
-const App = () => (
-  <div>
-    <h1>App</h1>
-    <p>TodosList using async requests</p>
-    <TodosCtxProvider>
-      <TodosList />
-    </TodosCtxProvider>
-    <UserCtxProvider>
-      <SignIn />
-    </UserCtxProvider>
-  </div>
-)
+import { AuthCtxProvider } from './reducers'
+import { GlobalStyle, darkTheme } from './themes'
+import Routes from './Routes'
+
+const App = () => {
+  const [theme] = useState(darkTheme)
+
+  return (
+    <BrowserRouter>
+      <AuthCtxProvider>
+        <ThemeProvider theme={theme}>
+          <Fragment>
+            <GlobalStyle />
+            <Routes />
+          </Fragment>
+        </ThemeProvider>
+      </AuthCtxProvider>
+    </BrowserRouter>
+  )
+}
 
 export default App

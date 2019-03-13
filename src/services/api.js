@@ -2,7 +2,7 @@ import axios from 'axios'
 import { getToken } from './auth'
 
 const api = axios.create({
-  baseURL: 'http://192.168.86.27:5000',
+  baseURL: 'https://feracode-num.herokuapp.com',
 })
 
 api.interceptors.request.use(async (config) => {
@@ -12,6 +12,7 @@ api.interceptors.request.use(async (config) => {
     headers.Authorization = `JWT ${token}`
     return { ...config, headers }
   }
+  console.log(config)
   return config
 })
 
