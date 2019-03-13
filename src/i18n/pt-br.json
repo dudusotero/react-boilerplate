@@ -1,0 +1,42 @@
+{
+  "translations": {
+    "Welcome to React.js": "Bem vindo ao React.js",
+    "New todo": "Novo todo",
+    "Toggle": "Alternar",
+    "Remove": "Remover",
+    "Go to": "Voltar",
+    "the top": "ao topo"
+  },
+  "Home": {
+    "Test": "Teste",
+    "Change Translation": "Trocar Traduçāo"
+  },
+  "SignIn": {
+    "Username": "Nome de usuário",
+    "Password": "Senha",
+    "Forgot your password?": "Esqueceu sua senha?",
+    "Sign In": "Entrar",
+    "Keep me signed in.": "Mantenha-me conectado.",
+    "with Twitch": "com o Twitch",
+    "with Google": "com o Google",
+    "with Facebook": "com o Facebook",
+    "New on newusedmedia?": "Novo no newusedmedia?",
+    "Create your account": "Crie sua conta"
+  },
+  "SignUp": {
+    "Create Account": "Criar Conta",
+    "Your Name": "Seu Nome",
+    "Email": "Email",
+    "Username": "Nome de Usuário",
+    "Password": "Senha",
+    "Confirm Password": "Confirmar Senha",
+    "I've read and accept the Conditions of Use and Privacy Notice.": "Li e aceito as Condições de Uso e o Aviso de Privacidade.",
+    "Sign Up": "Inscrever-se",
+    "or Sign Up with:": "ou Inscreva-se com:",
+    "Sign Up with Twitch": "Entrar com o Twitch",
+    "Sign Up with Google": "Entrar com o Google",
+    "Sign Up with Facebook": "Entrar com o Facebook",
+    "Already have an account?": "Já tem uma conta?",
+    "Sign In": "Entrar"
+  }
+}

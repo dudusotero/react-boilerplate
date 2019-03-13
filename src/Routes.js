@@ -2,7 +2,9 @@ import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
 import { isAuthenticated } from './services/auth'
-import { SignIn, SignUp, Settings } from './components/routes'
+import {
+  Home, SignIn, SignUp, Settings,
+} from './components/routes'
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -20,7 +22,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={() => <h1>Home</h1>} />
+    <Route exact path="/" component={Home} />
     <Route path="/signup" component={SignUp} />
     <Route path="/signin" component={SignIn} />
     <PrivateRoute path="/settings" component={Settings} />

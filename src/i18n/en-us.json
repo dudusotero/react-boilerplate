@@ -1,0 +1,42 @@
+{
+  "translations": {
+    "Welcome to React.js": "Welcome to React.js",
+    "New todo": "New todo",
+    "Toggle": "Toggle",
+    "Remove": "Remove",
+    "Go to": "Go to",
+    "the top": "the top"
+  },
+  "Home": {
+    "Test": "Test",
+    "Change Translation": "Change Translation"
+  },
+  "SignIn": {
+    "Username": "Username",
+    "Password": "Password",
+    "Forgot your password?": "Forgot your password?",
+    "Sign In": "Sign In",
+    "Keep me signed in.": "Keep me signed in.",
+    "with Twitch": "with Twitch",
+    "with Google": "with Google",
+    "with Facebook": "with Facebook",
+    "New on newusedmedia?": "New on newusedmedia?",
+    "Create your account": "Create your account"
+  },
+  "SignUp": {
+    "Create Account": "Create Account",
+    "Your Name": "Your Name",
+    "Email": "Email",
+    "Username": "Username",
+    "Password": "Password",
+    "Confirm Password": "Confirm Password",
+    "I've read and accept the Conditions of Use and Privacy Notice.": "I've read and accept the Conditions of Use and Privacy Notice.",
+    "Sign Up": "Sign Up",
+    "or Sign Up with:": "or Sign Up with:",
+    "Sign Up with Twitch": "Sign In with Twitch",
+    "Sign Up with Google": "Sign In with Google",
+    "Sign Up with Facebook": "Sign In with Facebook",
+    "Already have an account?": "Already have an account?",
+    "Sign In": "Sign In"
+  }
+}

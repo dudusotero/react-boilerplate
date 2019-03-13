@@ -12,7 +12,6 @@ api.interceptors.request.use(async (config) => {
     headers.Authorization = `JWT ${token}`
     return { ...config, headers }
   }
-  console.log(config)
   return config
 })
 
