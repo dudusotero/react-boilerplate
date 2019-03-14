@@ -6,10 +6,11 @@ import {
   useDocumentTitle,
   useRouter,
   useWindowWidth,
+  useMedia,
 } from '../../../hooks'
 
 function Home() {
-  const title = useFormInput('Title Sucks!')
+  const title = useFormInput('')
 
   const { t, i18n } = useTranslation('Home')
 
@@ -19,9 +20,26 @@ function Home() {
 
   const width = useWindowWidth()
 
+  const small = useMedia('(max-width: 400px)')
+
+  const large = useMedia('(min-width: 800px)')
+
   return (
     <div style={{ color: 'white' }}>
-      <h1>Title</h1>
+      <h1>{title.value}</h1>
+
+      <p>
+        <strong>Small - </strong>
+        {small ? 'Yep' : 'Nope'}
+      </p>
+      <p>
+        <strong>Large - </strong>
+        {large ? 'Yep' : 'Nope'}
+      </p>
+
+      <p>
+        <input value={title.value} onChange={title.onChange} />
+      </p>
       <p>
         <strong>translation:</strong>
         {t('Test')}
