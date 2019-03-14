@@ -8,6 +8,8 @@ import {
   useWindowWidth,
   useMedia,
 } from '../../../hooks'
+import Avatar from '../../commons/Avatar'
+import { StyledAvatar } from './styles'
 
 function Home() {
   const title = useFormInput('')
@@ -26,8 +28,9 @@ function Home() {
 
   return (
     <div style={{ color: 'white' }}>
+      <Avatar src="https://picsum.photos/200" size="largest" showStatus />
+      <StyledAvatar />
       <h1>{title.value}</h1>
-
       <p>
         <strong>Small - </strong>
         {small ? 'Yep' : 'Nope'}
@@ -36,7 +39,6 @@ function Home() {
         <strong>Large - </strong>
         {large ? 'Yep' : 'Nope'}
       </p>
-
       <p>
         <input value={title.value} onChange={title.onChange} />
       </p>
