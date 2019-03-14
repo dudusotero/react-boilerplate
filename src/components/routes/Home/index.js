@@ -8,7 +8,7 @@ import {
   useWindowWidth,
   useMedia,
 } from '../../../hooks'
-import Avatar from '../../commons/Avatar'
+import { Avatar } from '../../ui'
 import { StyledAvatar } from './styles'
 
 function Home() {
@@ -29,7 +29,7 @@ function Home() {
   return (
     <div style={{ color: 'white' }}>
       <Avatar src="https://picsum.photos/200" size="largest" showStatus />
-      <StyledAvatar />
+      <StyledAvatar size="large" />
       <h1>{title.value}</h1>
       <p>
         <strong>Small - </strong>
